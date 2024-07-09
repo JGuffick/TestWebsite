@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <head>
     <title>Global Warming</title>
-    <style>
+    <style> 
         body {
             background-color: #333;
-            body .container { font-family: sans-serif } 
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            padding-top: 80px;
+        }
+
+        .header {
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        .header .overlay-text {
+            font-size: 3em;
+            font-weight: bold;
+            color: #fff;
+            width: 100%;
+        }
+
         .top-bar {
             width: calc(100% - 40px);
             height: 80px;
@@ -19,6 +54,46 @@
             justify-content: center;
             align-items: center;
         }
+
+        .content {
+            border-radius: 15px;
+            display: block;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer {
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .header .overlay-text {
+                font-size: 2.5em;
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header .overlay-text {
+                font-size: 2em;
+                padding: 6px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .links {
+                margin: 0 10px;
+                border: 2px solid black;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .links {
+                margin: 0 0px;
+                border: 0px solid black;
+            }
+        }
+
         .links {
             background-color: #888;
             height: 70px;
@@ -33,6 +108,8 @@
             margin: 0 5px;
             border: 2px solid black;
         }
+
+
         .links button {
             background: none;
             border: none;
@@ -42,6 +119,43 @@
             padding: 0;
             outline: none;
         }
+        .hidden-button {
+            background-color: transparent;
+            border: none;
+            color: transparent;
+            font-size: 0;
+            width: 1920px;
+            height: 50px;
+            position: absolute;
+            top: 55;
+            right: 0;
+            z-index: 2;
+            cursor: pointer;
+            outline: none;
+        }
+        .side-by-side {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .iframe-container,
+        .image-container {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+                }
+
+        .iframe-container iframe,
+        .image-container img {
+            width: 100%;
+            border: none;
+        }
+            
     </style>
 </head>
 <body>
@@ -52,4 +166,68 @@
         <a class="links" href="Albums"><button>Albums</button></a>
         <a class="links" href="About"><button>About Us</button></a>
     </div>
+    <div class="container">
+        <div class="header">
+            <p class="overlay-text">Global Warming</p>
+            <img src="https://assets.euromoneydigital.com/dims4/default/8ebe87a/2147483647/strip/false/crop/2000x1331+0+0/resize/1486x989!/quality/90/?url=http%3A%2F%2Feuromoney-brightspot.s3.amazonaws.com%2Fb3%2F83%2Fd646bf1b43f4ab13f7704266a40f%2Fplastics-in-ocean.jpeg">
+        </div>
+        <div class="content">
+            <h2>What is it?</h2>
+            <p>Global warming is a big issue</p>
+            <div class="side-by-side">
+                <div class="amazon-music">
+                    <a href="https://www.ipcc.ch/sr15/" style="display: inline-block; text-decoration: none; color: white; text-align: center;">
+                        <p style="font-size: 2em;">Check out IPCC!</p>
+                        <img src="https://www.ipcc.ch/site/assets/uploads/sites/2/2018/08/ipcc-logo.png" style="background-color: white; border-radius: 25px; max-width: 100%;">
+                    </a>
+                </div>
+                <div class="amazon-music">
+                    <a href="https://tiktok.com/@hooks109" style="display: inline-block; text-decoration: none; color: white; text-align: center;">
+                        <p style="font-size: 2em;">Follow on tiktok</p>
+                        <img src="https://i.imgur.com/dUpzC6t.png" style="background-color: white; border-radius: 25px; max-width: 100%;">
+                    </a>
+                </div>
+            </div>
+        <div class="side-by-side">
+            <div class="amazon-music">
+                <a href="https://tenderhooks.bandcamp.com/music" style="display: inline-block; text-decoration: none; color: white; text-align: center;">
+                    <p style="font-size: 2em;">Go to our Bandcamp.</p>
+                    <img src="https://i.imgur.com/vkE5sFG.png" style="background-color: white; border-radius: 25px; max-width: 100%;">
+                </a>
+            </div>
+        <div class="amazon-music">
+        <a href="https://tenderhooks.github.io/Links" style="display: inline-block; text-decoration: none; color: white; text-align: center;">
+            <p style="font-size: 2em;">Other Links (Website)</p>
+            <img src="https://i.imgur.com/LJQtQiU.png" style="background-color: white; border-radius: 25px; max-width: 120%;">
+        </a>
+    </div>
+</div>
+            <br>
+            <br>
+            <iframe width="100%" height="60%" src="https://www.youtube.com/embed/aM1jjhh-0Lo?si=RKCWEm_lGmKfzlQD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" style="border-radius: 35px;"></iframe>
+            <div class="footer">
+            <p id="site-version" class="version-info">© 2024 Tenderhooks. All rights reserved. Site Version: 3.2.0</p>
+            <script>
+                function fetchVersion() {
+                    fetch('https://raw.githubusercontent.com/Tenderhooks/tenderhooks.github.io/main/ver.txt')
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Network response was not ok');
+                            }
+                            return response.text();
+                        })
+                        .then(version => {
+                            document.getElementById('site-version').textContent = '© 2024 Tenderhooks. All rights reserved. Site Version: ' + version.trim();
+                        })
+                        .catch(error => {
+                            console.error('There was a problem with the fetch operation:', error);
+                            document.getElementById('site-version').textContent = 'Version info unavailable! (404)';
+                        });
+                }
+                fetchVersion();
+            </script>
+            <script src="https://tenderhooks.statuspage.io/embed/script.js"></script>
+        </div>
+    </div>
+</div>
 </body>
