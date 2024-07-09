@@ -1,7 +1,54 @@
 <!DOCTYPE html>
 <head>
     <title>Global Warming</title>
+    <style>
+        .body {
+            background-color: #333;
+        }
+        .top-bar {
+            width: calc(100% - 40px);
+            height: 80px;
+            background-color: #555;
+            position: fixed;
+            top: 30px;
+            left: 20px;
+            z-index: 1;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .links {
+            background-color: #888;
+            height: 70px;
+            width: 150px;
+            border-radius: 35px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            margin: 0 5px;
+            border: 2px solid black;
+        }
+        .links button {
+            background: none;
+            border: none;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            padding: 0;
+            outline: none;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="top-bar">
+        <a class="links" href="#"><button>Home</button></a>
+        <a class="links" href="Links"><button>Links</button></a>
+        <a class="links" href="contact"><button>Contact</button></a>
+        <a class="links" href="Albums"><button>Albums</button></a>
+        <a class="links" href="About"><button>About Us</button></a>
+    </div>
 </body>
